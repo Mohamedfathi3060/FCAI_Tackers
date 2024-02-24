@@ -17,10 +17,7 @@ const headers = {
 const sendMessageTo = (number) => {
   client.messages
     .create({
-      body: `When Registration is Opened, i will Send You Again..
-Don't Worry 😁😁
-From 'FATHI_ABDO WhatsApp BOT'
-      `,
+      body: `Registration is opened Now, Hurry! ⌛⌛⌛`,
       from: "whatsapp:+14155238886",
       to: `whatsapp:+2${number}`,
     })
@@ -34,7 +31,7 @@ const checkRegistration = async () => {
   });
   if (
     res.data.prerequistesSatistfiedCourses.length != 0 ||
-    res.data.responseCode === -1
+    res.data.responseCode != -1
   ) {
     sendMessageTo("01113931845");
     sendMessageTo("01024068783");
@@ -47,3 +44,4 @@ const checkRegistration = async () => {
   }
 };
 checkRegistration();
+setInterval(checkRegistration, 300000);
