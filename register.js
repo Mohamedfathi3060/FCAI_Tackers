@@ -37,11 +37,13 @@ const checkRegistration = async () => {
     sendMessageTo("01024068783");
     sendMessageTo("01149800106");
     sendMessageTo("01093598773");
-    // sendMessageTo("01224781985");
+    sendMessageTo("01224781985");
   } else {
     // Still Not Opened
     console.log("Still not Openeed");
   }
 };
 checkRegistration();
+sendMessageTo("01113931845");
+sendMessageTo("01024068783");
 setInterval(checkRegistration, 300000);
