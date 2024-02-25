@@ -48,4 +48,4 @@ const checkRegistration = async () => {
 };
 checkRegistration();
 sendMessageTo("01024068783", NotAppear);
-setInterval(checkRegistration, 30000);
+setInterval(checkRegistration, 300000);
