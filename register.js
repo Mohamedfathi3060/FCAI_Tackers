@@ -11,7 +11,7 @@ const client = require("twilio")(accountSid, authToken);
 const headers = {
   "Content-Type": "application/json",
   Authorization:
-    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDIxMDM0OCIsImF1dGgiOiJST0xFX1NUVURFTlQiLCJleHAiOjE3MTAzNjc2ODN9.dxJGLPG-GpZwML1ccwxpALkxkparlGW2FkCoDY25O2rW45mzggoX2goIRQ_Jn0E1FEhjTV9lWqNvCXZ5IUiRlQ",
+    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDIxMDM0OCIsImF1dGgiOiJST0xFX1NUVURFTlQiLCJleHAiOjE3MTA0MDI2NDV9.5mE64qiMy5FlSELYKnN3v9VXpRqS8b0YP8pKbrmU8nIXLxB3b8F3F-W0ITPfXKzWbzuOi8E4kcOHPr4DAMBimQ",
   // Add more headers if needed
 };
 const appear = `Registration is opened Now, Hurry! ⌛⌛⌛`;
@@ -41,11 +41,13 @@ const checkRegistration = async () => {
     sendMessageTo("01149800106", appear);
     sendMessageTo("01093598773", appear);
     sendMessageTo("01224781985", appear);
+    sendMessageTo("01155313475", appear);
   } else {
     // Still Not Opened
+    console.log(res.data);
     console.log("Still not Openeed");
   }
 };
 checkRegistration();
 sendMessageTo("01024068783", NotAppear);
-setInterval(checkRegistration, 300000);
+setInterval(checkRegistration, 60000);
