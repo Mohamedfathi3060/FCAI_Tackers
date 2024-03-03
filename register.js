@@ -3,6 +3,7 @@ const player = require("play-sound")();
 
 const accountSid = "AC05868868a9948e692ad790ebe91b94e1";
 const authToken = "3f2890709f3b1a640e6b6e17f1cb4003";
+
 const client = require("twilio")(accountSid, authToken);
 
 // Send Request to check if register
@@ -11,7 +12,7 @@ const client = require("twilio")(accountSid, authToken);
 const headers = {
   "Content-Type": "application/json",
   Authorization:
-    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDIxMDM0OCIsImF1dGgiOiJST0xFX1NUVURFTlQiLCJleHAiOjE3MTA0MDI2NDV9.5mE64qiMy5FlSELYKnN3v9VXpRqS8b0YP8pKbrmU8nIXLxB3b8F3F-W0ITPfXKzWbzuOi8E4kcOHPr4DAMBimQ",
+    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDIxMDM0OCIsImF1dGgiOiJST0xFX1NUVURFTlQiLCJleHAiOjE3MTA1NDE5NzJ9.nAThZWSO5_dmizWJkjKgS1ZtAnoUNBz4WWXKhwWiJxtuC8Bm7YiH0WbIOXPdpmuzIZVZdBW9Q8HdqLy1rEcUlQ",
   // Add more headers if needed
 };
 const appear = `Registration is opened Now, Hurry! ⌛⌛⌛`;
