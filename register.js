@@ -1,19 +1,14 @@
 const axios = require("axios");
-const player = require("play-sound")();
+require("dotenv").config();
 
-const accountSid = "AC05868868a9948e692ad790ebe91b94e1";
-const authToken = "3f2890709f3b1a640e6b6e17f1cb4003";
+const client = require("twilio")(
+  process.env.ACCOUNT_SID,
+  process.env.AUTH_TOKEN
+);
 
-const client = require("twilio")(accountSid, authToken);
-
-// Send Request to check if register
-// OK === Play;
-// FAIL === Reapeat;
 const headers = {
   "Content-Type": "application/json",
-  Authorization:
-    "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIyMDIxMDM0OCIsImF1dGgiOiJST0xFX1NUVURFTlQiLCJleHAiOjE3MTA1NDE5NzJ9.nAThZWSO5_dmizWJkjKgS1ZtAnoUNBz4WWXKhwWiJxtuC8Bm7YiH0WbIOXPdpmuzIZVZdBW9Q8HdqLy1rEcUlQ",
-  // Add more headers if needed
+  Authorization: "Bearer " + process.env.TOKEN, // Add more headers if needed
 };
 const appear = `Registration is opened Now, Hurry! ⌛⌛⌛`;
 const NotAppear = `Testing ...`;
