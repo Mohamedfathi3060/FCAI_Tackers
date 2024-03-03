@@ -2,7 +2,7 @@ const axios = require("axios");
 const player = require("play-sound")();
 
 const accountSid = "AC05868868a9948e692ad790ebe91b94e1";
-const authToken = "e2af53a15928c8680532601a734fc84b";
+const authToken = "3f2890709f3b1a640e6b6e17f1cb4003";
 const client = require("twilio")(accountSid, authToken);
 
 // Send Request to check if register
